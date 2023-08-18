@@ -49,3 +49,13 @@ h3 {
     flex-direction: row;
   }
 }
+
+/* Targets all images within the .group container
+img {
+  width: 100%;
+} */
+
+/*Targets only images in the main container*/
+main img {
+  width: 100%;
+}
