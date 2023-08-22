@@ -1,3 +1,80 @@
 body {
   margin: 0;
 }
+
+header {
+  /* Set background color to black. */
+  background-color: #000;
+  /* Add 40 pixels of space under the header so that the main content isnt so close to the navigation */
+  margin-bottom: 40px;
+}
+
+header h1 {
+  /* Set color to white */
+  color: #fff;
+  /* Center the text */
+  text-align: center;
+  /*Remove default margin and spacing around h1 element */
+  margin: 0;
+  /* Push text down 20 pixels from top of page */
+  padding-top: 20px;
+}
+
+header nav {
+  /* Changes display property to flex */
+  display: flex;
+  /* Centers an element defined as 'display: flex' */
+  justify-content: center;
+}
+
+header nav ul {
+  /*Changes display property to flex */
+  display: flex;
+  /* Default is to display in a single row, so no need for flex-direction */
+
+  /* Remove default padding to the left of the unordered list */
+  padding-left: 0;
+  /* Remove bullet points */
+  list-style: none;
+}
+
+header nav ul li a {
+  /* Sets link color to white */
+  color: #fff;
+  /* Remove underline from link */
+  text-decoration: none;
+  /* Apply 20 pixels of margin to the right of each link */
+  margin: 0 20px 0 0;
+}
+
+header nav ul li:last-child a {
+  /* Remove the margin to the right of the last anchor tag so that the nav appears centered */
+  margin-right:0;
+}
+
+/* When browser is larger than 600 pixels, apply these rules */
+@media all and (min-width: 600px) {
+  header {
+  /* Change default setting from block to flex */
+  display: flex;
+  /* Push items (title and nav) to the far sides of the browser with space between them */
+  justify-content: space-between;
+  /* Add 0 pixels padding top and bottom, and 30 pixels padding left and right */
+  padding: 0 30px;
+  }
+  header h1 {
+    /* Set 14 pixels of margin above and below h1 and 0 margin to left and right */
+    margin: 14px 0;
+    /* Remove or set 0 pixels of padding above h1 */
+    padding-top: 0;
+  }
+  header nav {
+    /* Pushes the nav container down by 8 pixels to make it visually more present within the space */
+    margin-top: 8px;
+  }
+  /* Users cannot hover on mobile devices, so below is only implemented on larger screens */
+  header nav ul li a:hover {
+    /* Targets the change when a user holds the pointer over the links */
+    color: #bdbdbd;
+  }
+}
